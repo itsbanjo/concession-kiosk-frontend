@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var os = require("os")
 var host = process.env.COMPONENT_BACKEND_HOST || '0.0.0.0';
 var port = process.env.COMPONENT_BACKEND_PORT || 8080;
 

@@ -7,8 +7,8 @@ var port = process.env.COMPONENT_BACKEND_PORT || 8080;
 
 /* GET main page */
 router.get('/', function(req, res, next) {
-  res.render('index');
-});
+  var hostname = os.hostname();
+  res.render('index', { hostname: hostname });});
 
 /* POST main page */
 router.post('/', function (req, res, next) {

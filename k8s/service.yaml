@@ -8,13 +8,6 @@ metadata:
   name: front-end
   namespace: concession
 spec:
-  clusterIP: 172.30.244.123
-  clusterIPs:
-  - 172.30.244.123
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - name: 8080-tcp
     port: 8080

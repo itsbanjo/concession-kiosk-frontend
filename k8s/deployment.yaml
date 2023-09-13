@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: front-end
   namespace: concession
 spec:
   progressDeadlineSeconds: 600
@@ -9,7 +9,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      deployment: frontend
+      deployment: front-end
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        deployment: frontend
+        deployment: front-end
     spec:
       containers:
       - env:
@@ -26,9 +26,9 @@ spec:
           value: backend
         - name: COMPONENT_BACKEND_PORT
           value: "8080"
-        image: ' '
+        image: front-end
         imagePullPolicy: IfNotPresent
-        name: frontend
+        name: front-end
         ports:
         - containerPort: 8080
           protocol: TCP

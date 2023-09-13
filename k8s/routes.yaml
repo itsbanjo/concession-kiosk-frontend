@@ -2,16 +2,16 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: frontend
-    app.kubernetes.io/component: frontend
-    app.kubernetes.io/instance: frontend
-  name: frontend
+    app: front-end
+    app.kubernetes.io/component: front-end
+    app.kubernetes.io/instance: front-end
+  name: front-end
 spec:
-  host: frontend-concession.apps.49.integrate.zone
+  host: front-end-concession.apps.49.integrate.zone
   port:
     targetPort: 8080-tcp
   to:
     kind: Service
-    name: frontend
+    name: front-end
     weight: 100
   wildcardPolicy: None
